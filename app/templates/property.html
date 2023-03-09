@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block css %}{% endblock %}
+
+{% block main %}
+<div class="big-card">
+    <div class="left">                                                              <!-- image  section-->
+         <img src={{url_for("get_image", filename=data.url)}} alt="">
+    </div>
+    <div class="right">                                                             <!-- main card body-->
+        <h3>{{data.title}}</h3>
+        <div class="right-stats-graphic">
+            <p class="right-price">${{data.price}}</p>
+            <p class="right-type">{{data.type}}</p>
+        </div>
+        <p>{{data.description}}</p>
+        <div class="right-stats-text">
+            <div class="sub-1">
+                <i class="fa-solid fa-bed"></i><div>{{data.rooms}} Bedrooms</div>
+            </div>
+            <div class="sub-2">
+                <i class="fa-solid fa-bath"></i><div>{{data.bathrooms}} Bathrooms</div>
+            </div>
+        </div>
+        <div class="location">
+            <i class="fa-solid fa-location-dot"></i><div>{{data.location}}</div>
+        </div>
+        <button id="email">Email Realtor</button>
+    </div>
+</div>
+{% endblock %}
+
+{% block js %}{% endblock %}

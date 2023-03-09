@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% block css %}{% endblock %}
+
+{% block main %}
+<h1>Add New Property</h1>
+<form method="POST" action="/properties/create" enctype = "multipart/form-data">
+  {{ form.csrf_token }}                   <!-- mandatory token -->
+  <div class="property-title">            <!--title section-->
+    <label>Property Title</label>
+    {{form.title}}
+  </div>
+  <div class="property-desc">               <!-- description section-->
+    <label>Description</label>
+    {{form.desc}}
+  </div>
+  <div class="property-stats">              <!-- no. of rooms-->
+    <div class="stats-sub-1">
+        <label>No. of Rooms</label>
+        {{form.rooms(placeholder="3")}}
+    </div>
+    <div class="stats-sub-2">               <!-- no. of bathrooms-->
+        <label>No. of Bathrooms</label>
+        {{form.bathrooms(placeholder="2")}}
+    </div>
+  </div>
+  <div class="property-price">
+    <div class="price-sub-1">                 <!--price-->
+        <label>Price</label>
+        {{form.price(placeholder="15,000.000")}}
+    </div>
+    <div class="price-sub-2">                 <!-- property type selector-->
+        <label>Property Type</label>
+        {{form.propertytype}}
+    </div>
+  </div>
+    <div class="property-location">           <!-- location field-->
+        <label>Location</label>
+        {{form.location(placeholder="10 Waterloo Rd")}}
+    </div>
+     <div class="property-photo">              <!--photo upload field-->
+        <label>Photo</label>
+        <label class="btn" for="upload">Browse</label>
+        {{form.upload(id="upload")}}
+    </div> 
+  
+  <button type="submit" class="add-property">Add Property</button>
+</form>
+{% endblock %}
+
+{% block js %}{% endblock %}

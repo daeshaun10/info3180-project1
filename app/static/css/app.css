@@ -1,0 +1,282 @@
+:root {
+    --shadow: 5px 5px 5px rgba(0, 0, 0, .2);
+    --shadow-input: 0 0 2px rgba(0, 0,0, .2);
+}
+
+body {
+    padding-top: 5rem;
+    height: 100vh;
+    background: rgba(170, 166, 166, 0.466);
+}
+
+.flashes {
+    list-style: none;
+}
+
+.flashes li {
+    font-size: 2rem;
+    color: rgb(13, 160, 123);
+}
+
+.navbar-back {
+    background: rgb(8, 155, 143) !important;
+}
+
+.cards {
+    height: 100%;
+    width: 80%;
+    margin: 2rem auto 2rem auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.property-card {
+    width: 16vw;
+    min-height: 40vh;
+    border-radius: 2px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: #fff;
+    box-shadow: var(--shadow);
+}
+
+.img-container {
+    margin-bottom: 10px;
+    width: 100%;
+    height: 60%;
+}
+
+.img-container img {
+    width: 100%;
+    height: 100%;
+    border-radius: 2px 2px 0 0;
+}
+
+.property-card-text {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+}
+
+.property-card-text .text {
+    color: grey;
+    font-size: .9rem;
+}
+
+.property-card-text .price {
+    font-size: .7rem;
+    background-color: rgb(92, 171, 224);
+    display: inline-block;
+    color: white;
+    padding: 5px 10px 5px 10px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    width: 70px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.btn-container {
+    padding: 0;
+    width: 100%;
+    background: rgb(8, 155, 143);
+    text-align: center;
+}
+
+.btn-container a {
+    display: block;
+    text-decoration: none;
+    width: 100%;
+    padding: 10px;
+    color: white;
+}
+
+.btn-container:hover {
+    background:rgb(6, 117, 108);
+}
+
+/* property.html */
+
+.big-card {
+    width: 80%;
+    background: #fff;
+    display: flex;
+    box-shadow: var(--shadow);
+}
+
+.left, .right {
+    flex: 1;
+}
+
+.left img {
+    width: 100%;
+    height: 100%;
+}
+
+.right {
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+.right h3 {
+    margin-bottom: 20px;
+}
+
+.right-stats-graphic {
+    display: flex;
+}
+
+.right-price {
+    margin-right: 10px;
+    padding: 5px 10px;
+    background: rgb(30, 175, 233);
+    font-size: .8rem;
+    border-radius: 30px;
+    color: #fff;
+}
+
+.right-type {
+    padding: 5px 10px;
+    background: rgb(183, 185, 17);
+    font-size: .8rem;
+    border-radius: 30px;
+    color: #fff;
+}
+
+.right-stats-text {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.right-stats-text .sub-1 {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.right-stats-text .sub-1 i {
+    margin-right: 10px;
+}
+
+.right-stats-text .sub-2 {
+    display: flex;
+    align-items: center;
+  
+}
+
+.right-stats-text .sub-2 i {
+    margin-right: 10px;
+}
+
+.right .location {
+    display: flex;
+   align-items: center;
+   margin-bottom: 20px;
+}
+
+.right .location i {
+    margin-right: 20px;
+}
+
+.right button {
+    width: 150px;
+    border: none;
+    background: rgb(13, 191, 223);
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+/* property form */
+
+form {
+    width: 50%;
+    background: #fff;
+    box-shadow: var(--shadow);
+    padding: 30px;
+}
+
+form label  {
+    display: block;
+    font-size: .8rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+form input, form textarea, form select {
+    outline: none;
+    border: none;
+    box-shadow: var(--shadow-input);
+}
+
+.property-title input, form textarea {
+    width: 85%;
+    margin-bottom: 10px;
+}
+
+form textarea {
+    resize: none;
+}
+
+.property-stats, .property-price {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.stats-sub-1, .stats-sub-2, .price-sub-1, .price-sub-2 {
+    /* margin-right: 10px; */
+    flex: 1;
+}
+
+.stats-sub-2 input {
+    width: 70%;
+}
+
+.price-sub-2 select{
+    width: 70%;
+}
+
+.property-location {
+    margin-bottom: 10px;
+}
+
+.property-photo {
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.property-photo .btn {
+    box-shadow: var(--shadow-input);
+}
+
+.property-photo input[type="file"]{
+    outline: none;
+    border: none;
+    position: absolute;
+    width: 66px;
+    height: 35px;
+    top: 35px;
+    left: 0;
+    z-index: -1;
+    opacity: 0;
+}
+
+.property-photo input[type=file]:hover {
+    cursor: pointer;
+}
+
+.add-property {
+    border: none;
+    outline: none;
+    background: rgb(23, 186, 207);
+    color: white;
+    border-radius: 2px;
+    padding: 7px;
+    box-shadow: var(--shadow-input);
+}
+
